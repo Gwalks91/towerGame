@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TowerGame.ObjectInterfaces
+﻿namespace TowerGame.ObjectInterfaces
 {
-    class IDrawableObject
+    using System;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+
+    public interface IDrawableObject : IGameObject
     {
+        Texture2D Sprite { get; set; }
+        
+        Vector2 Location { get; set; }
+
+        void Draw(SpriteBatch spriteBatch);
     }
 }

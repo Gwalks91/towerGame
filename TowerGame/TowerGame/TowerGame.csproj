@@ -42,6 +42,24 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Enums\ArmorType.cs" />
+    <Compile Include="Enums\AttackType.cs" />
+    <Compile Include="Enums\TileMasks.cs" />
+    <Compile Include="GameObjects\Building.cs" />
+    <Compile Include="GameObjects\Tower.cs" />
+    <Compile Include="Interfaces\IState.cs" />
+    <Compile Include="Interfaces\Objects\IClickableObject.cs" />
+    <Compile Include="Interfaces\Objects\IDrawableObject.cs" />
+    <Compile Include="Interfaces\Objects\IGameObject.cs" />
+    <Compile Include="Interfaces\Objects\IHealthObject.cs" />
+    <Compile Include="Interfaces\Objects\IMovableObject.cs" />
+    <Compile Include="Managers\InputManager.cs" />
+    <Compile Include="Managers\StateManager.cs" />
+    <Compile Include="Interfaces\IArmorClass.cs" />
+    <Compile Include="MiscClasses\AttackClass.cs" />
+    <Compile Include="MiscClasses\AttackUpgrades.cs" />
+    <Compile Include="States\GameState\GameState.cs" />
+    <Compile Include="States\GameState\Grid\GameGrid.cs" />
     <Compile Include="TowerGameMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,8 +125,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="Content\GameSettings\EnemyInfo.json" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

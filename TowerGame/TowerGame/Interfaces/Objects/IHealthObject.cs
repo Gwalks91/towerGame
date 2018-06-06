@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TowerGame.ObjectInterfaces
+﻿namespace TowerGame.ObjectInterfaces
 {
-    class IHealthObject
+    using System;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using TowerGame.MiscClasses;
+
+    public interface IHealthObject
     {
+        int Health { get; set; }
+
+        IArmorClass Armor { get; set; }
+
+        void TakeDamage(AttackClass attack);
+
+        void Heal(int amount);
+
     }
 }

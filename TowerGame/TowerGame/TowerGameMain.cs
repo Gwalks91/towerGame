@@ -1,9 +1,13 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+﻿
 
 namespace TowerGame
 {
+
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
+
+    using TowerGame.States.GameState;
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
@@ -11,6 +15,7 @@ namespace TowerGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        GameGrid grid;
         
         public TowerGameMain()
         {
@@ -27,8 +32,9 @@ namespace TowerGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            grid = new GameGrid();
             base.Initialize();
+
         }
 
         /// <summary>
@@ -39,6 +45,7 @@ namespace TowerGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            grid.LoadGrid(Content, "");
 
             // TODO: use this.Content to load your game content here
         }
@@ -75,7 +82,7 @@ namespace TowerGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            grid.DrawGrid(spriteBatch);
 
             base.Draw(gameTime);
         }

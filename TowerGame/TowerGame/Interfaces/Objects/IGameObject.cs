@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TowerGame.ObjectInterfaces
+﻿namespace TowerGame.ObjectInterfaces
 {
-    class IGameObject
+    using System;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+
+    public interface IGameObject
     {
+        void Update(GameTime gameTime);
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TowerGame.ObjectInterfaces
 {
-    class IMovableObject
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+
+    public interface IMovableObject : IDrawableObject
     {
+        float MoveSpeed { get; set; }
     }
 }
