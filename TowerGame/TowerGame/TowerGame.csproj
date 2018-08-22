@@ -47,6 +47,7 @@
     <Compile Include="Enums\TileMasks.cs" />
     <Compile Include="GameObjects\Building.cs" />
     <Compile Include="GameObjects\Tower.cs" />
+    <Compile Include="Interfaces\Commands\Command.cs" />
     <Compile Include="Interfaces\IState.cs" />
     <Compile Include="Interfaces\Objects\IClickableObject.cs" />
     <Compile Include="Interfaces\Objects\IDrawableObject.cs" />
