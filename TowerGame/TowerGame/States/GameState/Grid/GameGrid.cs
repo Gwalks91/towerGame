@@ -50,9 +50,15 @@ namespace TowerGame.States.GameState
             {
                 for (int column = 0; column < tiles.GetLength(1); column++)
                 {
-                    spriteBatch.Draw(tileSprites, new Vector2((gameTileWidth * column), (gameTileHeight * row)), 
-                        new Rectangle((tiles[row, column] & (byte)(TileMasks.TextureMask)) * spriteTileWidth, 0, 100, 100), 
-                        Color.White, 0.0f, new Vector2((gameTileWidth / 2), (gameTileHeight / 2)), ((float)gameTileWidth / spriteTileWidth), SpriteEffects.None, 0.0f);
+                    spriteBatch.Draw(tileSprites, 
+                        new Vector2((gameTileWidth * column), (gameTileHeight * row)), 
+                        new Rectangle((tiles[row, column] & (byte)(TileMasks.TextureMask)) * spriteTileWidth, 0, spriteTileWidth, spriteTileHeight), 
+                        Color.White, 
+                        0.0f, 
+                        new Vector2((gameTileWidth / 2), (gameTileHeight / 2)), 
+                        ((float)gameTileWidth / spriteTileWidth), 
+                        SpriteEffects.None, 
+                        0.0f);
                 }
                 
             }

@@ -12,5 +12,9 @@ namespace TowerGame.ObjectInterfaces
     public interface IMovableObject : IDrawableObject
     {
         float MoveSpeed { get; set; }
+
+        Vector2 Destination { get; }
+
+        void UpdateDestination(Vector2 newDestination);
     }
 }

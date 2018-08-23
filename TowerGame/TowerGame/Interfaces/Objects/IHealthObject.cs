@@ -5,7 +5,7 @@
     using Microsoft.Xna.Framework.Graphics;
     using TowerGame.MiscClasses;
 
-    public interface IHealthObject
+    public interface IHealthObject : IGameObject
     {
         int Health { get; set; }
 

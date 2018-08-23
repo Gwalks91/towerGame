@@ -42,12 +42,14 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\MoveCommand.cs" />
     <Compile Include="Enums\ArmorType.cs" />
     <Compile Include="Enums\AttackType.cs" />
     <Compile Include="Enums\TileMasks.cs" />
+    <Compile Include="GameObjects\BaseGameObject.cs" />
     <Compile Include="GameObjects\Building.cs" />
     <Compile Include="GameObjects\Tower.cs" />
-    <Compile Include="Interfaces\Commands\Command.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IState.cs" />
     <Compile Include="Interfaces\Objects\IClickableObject.cs" />
     <Compile Include="Interfaces\Objects\IDrawableObject.cs" />
